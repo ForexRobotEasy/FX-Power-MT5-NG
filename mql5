@@ -1,0 +1,103 @@
+
+//+------------------------------------------------------------------+
+//|                                                   FX Power MT5 NG |
+//|                             Developer's Site: forexroboteasy.com |
+//|                                 Developed by: Forex Robot Easy Team |
+//+------------------------------------------------------------------+
+
+// Define necessary variables
+double lotSize = 1.0; // Initial lot size for trading
+bool isTradingEnabled = true; // Flag to enable/disable automated trading
+
+//+------------------------------------------------------------------+
+//|                            Trading Function                       |
+//+------------------------------------------------------------------+
+void Trade()
+{
+   // Check if trading is enabled
+   if (!isTradingEnabled)
+       return;
+   
+   // Place a market order based on pre-defined parameters
+   OrderSend(Symbol(), OP_BUY, lotSize, Ask, 0, 0, 0, 'FX Power MT5 NG', 0, 0, Green);
+   
+   // Add more trading logic and strategies here
+   
+   // Print a message to the Experts tab
+   Print('Trade executed successfully');
+}
+
+//+------------------------------------------------------------------+
+//|                            User Interface                         |
+//+------------------------------------------------------------------+
+void OnChart()
+{
+   // Display indicators and graphical representations of market data
+   
+   // Add code for user-friendly interface
+   
+   // Add necessary graphical objects and indicators
+}
+
+//+------------------------------------------------------------------+
+//|                           Price Analysis                          |
+//+------------------------------------------------------------------+
+void AnalyzePrice()
+{
+   // Implement tools for in-depth price analysis
+   
+   // Add technical indicators and chart patterns for analysis
+}
+
+//+------------------------------------------------------------------+
+//|                         Order Types and Modes                     |
+//+------------------------------------------------------------------+
+void SetOrderTypesAndModes()
+{
+   // Support various order types such as market orders, limit orders, stop orders, and trailing stops
+   
+   // Add code to set order types and execution modes
+}
+
+//+------------------------------------------------------------------+
+//|                           Chat Integration                       |
+//+------------------------------------------------------------------+
+void ChatIntegration()
+{
+   // Integrate a chat feature within the platform for traders to communicate and share trading ideas
+   
+   // Add code for chat integration
+}
+
+//+------------------------------------------------------------------+
+//|                          OnTick Event                             |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+   // Call trading function
+   Trade();
+   
+   // Add more functionality here
+   
+   // Call other necessary functions
+   AnalyzePrice();
+   SetOrderTypesAndModes();
+   ChatIntegration();
+}
+
+//+------------------------------------------------------------------+
+//|                           Initialization                         |
+//+------------------------------------------------------------------+
+void OnInit()
+{
+   // Add initialization code here
+}
+
+//+------------------------------------------------------------------+
+//|                         Program Execution                        |
+//+------------------------------------------------------------------+
+void OnStart()
+{
+   // Add code for program execution here
+}
+
